@@ -1,0 +1,10 @@
+#intermediate files 
+temp/
+
+#python cache
+
+__pycache__/
+
+
+#macOS
+.DS_Store
