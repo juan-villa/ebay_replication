@@ -8,9 +8,12 @@ import matplotlib.dates as mdates
 # base directory = folder where this script lives
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DATA_PATH = os.path.join(BASE_DIR, 'input', 'PaidSearch.csv')
-FIGURES_DIR = os.path.join(BASE_DIR, 'output', 'figures')
-TEMP_DIR = os.path.join(BASE_DIR, 'temp')
+TEMP_DIR = os.path.join(BASE_DIR, "temp")
+FIGURES_DIR = os.path.join(BASE_DIR, "output", "figures")
+DATA_PATH = os.path.join(BASE_DIR, "input", "PaidSearch.csv")
+
+os.makedirs(TEMP_DIR, exist_ok=True)
+os.makedirs(FIGURES_DIR, exist_ok=True)
 
 # Load data
 df = pd.read_csv(DATA_PATH)
