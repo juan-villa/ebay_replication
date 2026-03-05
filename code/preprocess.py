@@ -5,15 +5,15 @@ import os
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-BASE_DIR = '/Users/juanvilla/ebay_replication'
+# base directory = folder where this script lives
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DATA_PATH = os.path.join(BASE_DIR, 'input', 'PaidSearch.csv')
 FIGURES_DIR = os.path.join(BASE_DIR, 'output', 'figures')
 TEMP_DIR = os.path.join(BASE_DIR, 'temp')
 
-
 # Load data
-df = pd.read_csv('input/PaidSearch.csv')
+df = pd.read_csv(DATA_PATH)
 df['log_revenue'] = np.log(df['revenue'])
 
 #treated pivot
@@ -81,7 +81,6 @@ print(f"Date range: {min(df.date)} to {max(df.date)}")
 
 
 #fig 2
-
 
 df['date'] = pd.to_datetime(df['date'], format='%d-%b-%y')
 
