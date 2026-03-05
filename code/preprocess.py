@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 # base directory = folder where this script lives
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DATA_PATH = os.path.join(BASE_DIR, 'input', 'PaidSearch.csv')
 FIGURES_DIR = os.path.join(BASE_DIR, 'output', 'figures')
